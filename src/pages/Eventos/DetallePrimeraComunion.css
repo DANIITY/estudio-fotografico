@@ -1,0 +1,224 @@
+.detalle-container-comunion { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+        url('/public/imagenes/Fondo.jpg') center/cover fixed no-repeat;
+    min-height: 100vh;
+    color: black;
+} 
+
+ .comunion-h1 {
+    color: #fff;
+    margin-bottom: 25px;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* --- NUEVO BLOQUE DE INFO --- */
+.detalle-info-comunion {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 25px 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    margin-bottom: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.detalle-info-comunion label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #2c193b;
+    font-size: 1rem;
+    width: 280px;
+}
+
+.detalle-input-comunion {
+    margin-top: 8px;
+    padding: 10px 12px;
+    border: 2px solid #b91c1c;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.detalle-input-comunion:focus {
+    border-color: #2c193b;
+    box-shadow: 0 0 8px rgba(185, 28, 28, 0.3);
+    background-color: #fff5f5;
+}
+
+/* --- TARJETAS --- */
+.detalle-lista-comunion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.detalle-card-comunion { 
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detalle-card-comunion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.detalle-img-comunion { 
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px; 
+} 
+
+.detalle-descripcion-comunion { 
+    font-size: 1.1rem; 
+    margin: 10px 0 15px;
+    color: #444; 
+} 
+
+.detalle-precio-comunion { 
+    color: #b91c1c;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px; 
+}
+
+/* --- BOTONES --- */
+.btn-eliminar-comunion {
+    color:  #2c193b;
+    border: 2px solid #2c193b;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-eliminar-comunion:hover {
+    background-color: #4d2b69;
+    color: whitesmoke;
+}
+
+/* --- TOTAL --- */
+.detalle-total-comunion {
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin: 40px 0 20px;
+    font-size: 1.4rem;
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+/* --- BOTONES INFERIORES --- */
+.btn-confirmar-comunion { 
+    background: #b91c1c;
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+}
+
+.btn-confirmar-comunion:hover {
+  background: #d43c3c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.detalle-botones-comunion {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-volver-comunion {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-volver-comunion:hover {
+  background: #222;
+  transform: scale(1.05);
+}
+
+/* --- MENSAJE DE ENVÍO --- */
+.mensaje-enviado-comunion {
+    color: lightgreen;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 25px;
+    background: rgba(0, 255, 0, 0.1);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid lightgreen;
+}
+
+.mensaje-confirmado-comunion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1px;
+  gap: 15px;
+}
+
+.mensaje-confirmado-comunion p {
+  color: rgb(0, 231, 0);
+  background: rgba(255, 255, 255, 0.863);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  width: fit-content;
+}
+
+.btn-volver-principal-comunion {
+    background-color: #fff;
+    color:  #2c193b;
+    border: 2px solid #2c193b;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-volver-principal-comunion:hover {
+    background-color: #4d2b69;
+    color: whitesmoke;
+}

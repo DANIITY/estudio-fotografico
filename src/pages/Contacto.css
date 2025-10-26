@@ -1,0 +1,179 @@
+/* --- HERO --- */
+.hero-contacto {
+    margin-top: 0;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-slide-contacto {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay-contacto {
+    background-color: rgba(0, 0, 0, 0.534);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+.hero-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contacto-section {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1110px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.274);
+}
+
+.contacto-info {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.contacto-boton {
+    display: block;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid #2c193b;
+    background-color: whitesmoke;
+    padding: 5px 10px;
+    color:  #2c193b;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contacto-boton:hover {
+    background-color: #4d2b69;
+    color: whitesmoke;
+}
+
+.contacto-redes {
+    margin-top: 20px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.contacto-redes img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.contacto-redes img:hover {
+  transform: scale(1.2);
+   filter: brightness(1);
+}
+
+.contacto-img img {
+   width: 320px;
+   height: auto;
+   border-radius: 12px;
+   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+   border: 2px solid #dab664;
+}
+
+/* --- BOTÓN FLOTANTE WHATSAPP --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #bfcfc5;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.formulario-section {
+  padding: 20px 20px;
+  text-align: center;
+  background: #00000000;
+  color: #ffffff;
+}
+
+.contacto-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 12px;
+  border: 2px solid #2c193b;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contacto-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.contacto-form button {
+  align-self: center;
+  width: 50%;
+}
+
+/* --- FOOTER --- */
+.footer-contacto {
+  text-align: center;
+  background-color: #4d2b69;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}

@@ -1,0 +1,138 @@
+.hero-identificacion {
+    margin-top: 0;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-slide-identificacion {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay-identificacion {
+    background-color: rgba(0, 0, 0, 0.534);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+.hero-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* --- FOOTER --- */
+.footer-identificacion {
+  text-align: center;
+  background-color: #4d2b69;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* --- SECCIÓN SERVICIOS --- */
+.servicios-identificacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #f3e9ff11 0%, #ffffff23 100%);
+}
+
+.servicio-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+  max-width: 480px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(182, 62, 214, 0.4);
+}
+
+.servicio-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.servicio-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.servicio-info h3 {
+  font-size: 1.6rem;
+  color: #4d2b69;
+  margin-bottom: 5px;
+}
+
+.precio {
+  font-size: 1.4rem;
+  color: #b63ed6;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.nota {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.servicio-info ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.servicio-info li {
+  margin-bottom: 8px;
+}
+
+.btn-contratar {
+  display: inline-block;
+  background: linear-gradient(135deg, #4d2b69, #b63ed6);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-contratar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(182, 62, 214, 0.6);
+}
+
+.slogan-tabs{
+    color: whitesmoke;
+    font-size: 1.8rem;
+    text-align: center;
+}
