@@ -54,7 +54,8 @@ function Contacto() {
               <li><Link to="/sesiones/cuadrosybasesescolares" onClick={() => setMenuAbierto(false)}>Cuadros y Bases Escolares</Link></li>
               <li><Link to="/sesiones/impresioncredencialpvc" onClick={() => setMenuAbierto(false)}>Impresión de Credencial PVC</Link></li>
               <li><Link to="/sesiones/caritabebe" onClick={() => setMenuAbierto(false)}>Caritas de bebé</Link></li>
-              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoestudio" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Identificación</Link></li>
             </ul>
           </li>
 
@@ -111,6 +112,13 @@ function Contacto() {
             </a>
 
             <a
+              href="tel:+525529652150"
+              className="contacto-boton"
+            >
+              Llamar: (55) 2965 2150
+            </a>
+
+            <a
               href="https://mail.google.com/mail/u/0/#inbox?compose=xQTrpQHKKwGnStdKBLCPjDSPDKdVWBJHFSPTBKtMDCblrHxLXbJZRZsfTMTrGpCRccvrpVvWSzqjVQJnqRWWxMcKCSFttmTqMZPLFHRWTjJVMKGXdMBzr" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -129,6 +137,9 @@ function Contacto() {
               </a>
               <a href="http://tiktok.com/@fotoyvideomundodigital" target="_blank" rel="noopener noreferrer">
                 <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok" />
+              </a>
+              <a href="https://www.instagram.com/mundodigitaldaniel?igsh=MWQ3bDJoaHRyMnRpZw==" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
               </a>
             </div>
           </div>

@@ -125,7 +125,8 @@ function Principal() {
               <li><Link to="/sesiones/cuadrosybasesescolares" onClick={() => setMenuAbierto(false)}>Cuadros y Bases Escolares</Link></li>
               <li><Link to="/sesiones/impresioncredencialpvc" onClick={() => setMenuAbierto(false)}>Impresión de Credencial PVC</Link></li>
               <li><Link to="/sesiones/caritabebe" onClick={() => setMenuAbierto(false)}>Caritas de bebé</Link></li>
-              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoestudio" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Identificación</Link></li>
             </ul>
           </li>
 
@@ -236,7 +237,8 @@ function Principal() {
           <Link to="/boda">Boda</Link>
           <Link to="/sesiones/impresioncredencialpvc">Impresión de credencial de PVC</Link>
           <Link to="/sesiones/caritabebe">Caritas de Bebé</Link>
-          <Link to="/sesiones/fotoidentificacion">Fotos de identificación</Link>
+          <Link to="/sesiones/fotoestudio">Fotos de estudio</Link>
+          <Link to="/sesiones/fotoidentificacion">Fotos de Identificación</Link>
           <Link to="/eventos/graduacion">Graduaciones</Link>
           <Link to="/eventos/bautizo">Bautizos</Link>
           <Link to="/eventos/xv">XV años</Link>
@@ -259,6 +261,9 @@ function Principal() {
           </a>
           <a href="http://tiktok.com/@fotoyvideomundodigital" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-tiktok"></i>
+          </a>
+          <a href="https://www.instagram.com/mundodigitaldaniel?igsh=MWQ3bDJoaHRyMnRpZw==" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram"></i>
           </a>
         </div>
         <div className="perfil-fotografo">

@@ -10,7 +10,7 @@ function SesionesImpresionCredencialPVC() {
   const slides = [
     {
       url: "/imagenes/Identificacion1.jpg",
-      titulo: "IMPRESIÓN DE CREDENCIALES EN PVC Y FOTOS DE IDENTIFICACIÓN",
+      titulo: "IMPRESIÓN DE CREDENCIALES EN PVC",
     },
   ];
 
@@ -42,7 +42,8 @@ function SesionesImpresionCredencialPVC() {
               <li><Link to="/sesiones/cuadrosybasesescolares">Cuadros y Bases Escolares</Link></li>
               <li><Link to="/sesiones/impresioncredencialpvc">Impresión de Credencial PVC</Link></li>
               <li><Link to="/sesiones/caritabebe">Caritas de bebé</Link></li>
-              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoestudio" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Identificación</Link></li>
             </ul>
           </li>
 
@@ -74,44 +75,7 @@ function SesionesImpresionCredencialPVC() {
           </div>
         </div>
       </section>
-
-      {/* SECCIÓN FOTOS DE IDENTIFICACIÓN */}
-      <section className="servicios-credencial">
-        <h2 className="titulo-seccion">📸 Fotos de Identificación</h2>
-        <div className="grid-servicios">
-          {[
-            { nombre: "Título", precio: "2x$120", img: "/imagenes/titulo.jpg" },
-            { nombre: "Diploma", precio: "2x$90", img: "/imagenes/diploma.png" },
-            { nombre: "Filiación", precio: "4x$80", img: "/imagenes/filiacion.png" },
-            { nombre: "Pasaporte", precio: "4x$80", img: "/imagenes/pasaporte.png" },
-            { nombre: "Cartilla", precio: "4x$70", img: "/imagenes/cartilla.jpg" },
-            { nombre: "Óvalo Miñón", precio: "4x$80", img: "/imagenes/ovalo.png" },
-            { nombre: "Credencial", precio: "4x$80", img: "/imagenes/credencial.jpg" },
-            { nombre: "Tamaño Visa", precio: "4x$80", img: "/imagenes/visa.png" },
-            { nombre: "Infantil", precio: "7x$40 o $60", img: "/imagenes/infantil.png" },
-          ].map((s, i) => (
-            <div key={i} className="servicio-card">
-              <img src={s.img} alt={s.nombre} className="servicio-img" />
-              <div className="servicio-info">
-                <h3>{s.nombre}</h3>
-                <p className="precio">{s.precio}</p>
-                <p>Papel fotográfico mate, a color o blanco y negro, con o sin retoque. <br />✨ Entrega en 1 hora.</p>
-                <button 
-                  className="btn-contratar" 
-                  onClick={() => enviarMensaje(
-                    `Fotos para ${s.nombre}`,
-                    s.precio,
-                    "Papel fotográfico mate, a color o blanco y negro, con o sin retoque. Entrega en 1 hora."
-                  )}
-                >
-                  💬 Contratar servicio
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      
       {/* SECCIÓN CREDENCIALES */}
       <section className="credenciales-section">
         <h2 className="titulo-seccion">🪪 Credenciales PVC</h2>

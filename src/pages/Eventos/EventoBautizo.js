@@ -51,7 +51,8 @@ function EventoBautizo() {
               <li><Link to="/sesiones/cuadrosybasesescolares">Cuadros y Bases Escolares</Link></li>
               <li><Link to="/sesiones/impresioncredencialpvc">Impresión de Credencial PVC</Link></li>
               <li><Link to="/sesiones/caritabebe">Caritas de bebé</Link></li>
-              <li><Link to="/sesiones/fotoidentificacion">Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoestudio" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Identificación</Link></li>
             </ul>
           </li>
           <li><Link to="/boda">Boda</Link></li>

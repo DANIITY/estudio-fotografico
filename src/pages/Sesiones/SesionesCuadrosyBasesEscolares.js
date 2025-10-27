@@ -42,7 +42,8 @@ function SesionesCuadrosyBasesEscolares() {
               <li><Link to="/sesiones/cuadrosybasesescolares">Cuadros y Bases Escolares</Link></li>
               <li><Link to="/sesiones/impresioncredencialpvc" onClick={() => setMenuAbierto(false)}>Impresión de Credencial PVC</Link></li>
               <li><Link to="/sesiones/caritabebe">Caritas de bebé</Link></li>
-              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoestudio" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Identificación</Link></li>
             </ul>
           </li>
 
@@ -82,10 +83,6 @@ function SesionesCuadrosyBasesEscolares() {
           Consulta nuestro catálogo de molduras y precios de cuadros.  
           Cada marco es totalmente personalizable en color y tamaño.
         </p>
-        <div className="catalogo-marcos">
-          <img src="/imagenes/Base1.png" alt="Catálogo Marcos 1" />
-          <img src="/imagenes/Base2.png" alt="Catálogo Marcos 2" />
-        </div>
 
         <a 
           href="/archivos/Catalogo marcos MUNDO DIGITAL 2025.pdf" 
@@ -113,8 +110,25 @@ function SesionesCuadrosyBasesEscolares() {
         >
           💬 Cotizar por WhatsApp
         </button>
-      </section>
 
+        {/* SECCIÓN BASES 3D*/}
+      <section className="marcos-section">
+        <h2 className="titulo-seccion">📏 Bases 3D</h2>
+        <p className="descripcion-marcos">
+          Consulta nuestro catálogo de bases 3D que tenemos para ti.
+        </p>
+
+        <a 
+          href="/archivos/bases 3d 2023-2024.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-contratar"
+        >
+          📖 Ver catálogo completo de marcos en 3D
+        </a>
+      </section>
+      </section>
+      
       {/* BOTÓN FLOTANTE WHATSAPP */}
       <a
         href="https://wa.me/5610912232"

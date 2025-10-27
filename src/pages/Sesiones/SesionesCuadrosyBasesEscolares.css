@@ -112,3 +112,13 @@
   width: 60px;
   height: 60px;
 }
+
+/* --- FOOTER --- */
+.footer-cuadros {
+  text-align: center;
+  background-color: #4d2b69;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}

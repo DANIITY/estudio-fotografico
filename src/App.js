@@ -10,6 +10,7 @@ import Detalle from "./pages/Detalle";
 
 // Puedes agregar rutas para sesiones y eventos también
 import SesionesFotoIdentificacion from "./pages/Sesiones/SesionesFotoIdentificacion";
+import SesionesFotoEstudio from "./pages/Sesiones/SesionesFotoEstudio";
 import SesionesImpresionCredencialPVC from "./pages/Sesiones/SesionesImpresionCredencialPVC";
 import SesionesCaritaBebe from "./pages/Sesiones/SesionesCaritaBebe";
 import SesionesCuadrosyBasesEscolares from "./pages/Sesiones/SesionesCuadrosyBasesEscolares";
@@ -46,6 +47,7 @@ function App() {
 
         {/* Sesiones */}
         <Route path="/sesiones/fotoidentificacion" element={<SesionesFotoIdentificacion />} />
+        <Route path="/sesiones/fotoestudio" element={<SesionesFotoEstudio />} />
         <Route path="/sesiones/impresioncredencialpvc" element={<SesionesImpresionCredencialPVC />} />
         <Route path="/sesiones/caritabebe" element={<SesionesCaritaBebe />} />
         <Route path="/sesiones/cuadrosybasesescolares" element={<SesionesCuadrosyBasesEscolares />} />

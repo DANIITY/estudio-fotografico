@@ -9,47 +9,21 @@ function SesionesFotoIdentificacion() {
 
   const slides = [
     {
-      url: "/imagenes/estudio.jpeg",
-      titulo: "FOTOS DE ESTUDIO",
+      url: "/imagenes/Identificacion1.jpg",
+      titulo: "FOTOS DE IDENTIFICACIÓN",
     },
   ];
 
   const toggleMenu = () => setMenuAbierto(!menuAbierto);
 
-  // ✅ Función para enviar mensaje de WhatsApp
-  const enviarWhatsApp = (servicio) => {
-    let mensaje = "";
+  const enviarMensaje = (servicio, precio, detalles) => {
+    const mensaje = encodeURIComponent(
+      `Hola Daniel, me interesa el servicio de ${servicio} (${precio}).\n\nDetalles:\n${detalles}\n\n¿Podrías darme más información?`
+    );
+    window.open(`https://wa.me/5610912232?text=${mensaje}`, "_blank");
 
-    if (servicio === "estudio") {
-      mensaje = `¡Hola! 👋 Me interesa contratar la *Sesión de fotos de estudio* 📸.
-      - Precio: $1,000
-      Incluye:
-      - Aproximadamente 45 min hasta 2 horas de sesión.
-      - Hasta 3 cambios de vestuario.
-      - Entrega de todos los archivos originales de la sesión.
-      - 5 fotos digitales retocadas en alta calidad.`;
-    } else if (servicio === "locacion") {
-      mensaje = `¡Hola Daniel! Me interesa contratar la *Sesión de fotos a locación* 🏞️.
-      - Precio: $1,500
-      Incluye:
-      - Aproximadamente 45 min hasta 2 horas de sesión.
-      - Hasta 3 cambios de vestuario.
-      - Entrega de todos los archivos originales de la sesión.
-      - 5 fotos digitales retocadas en alta calidad.
-      Nota: El precio puede variar según la distancia del lugar por viáticos.)`;
-    }
-
-    const numero = "5610912232";
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-
-    // Abrir WhatsApp
-    window.open(url, "_blank");
-
-    // Mostrar mensaje de éxito
-    setTimeout(() => {
-      alert("✅ Tu mensaje se ha enviado con éxito al fotógrafo.");
-      navigate("/"); // Redirige a la página principal
-    }, 1500);
+    alert("✅ Tu mensaje se ha enviado con éxito al fotógrafo.");
+    navigate("/");
   };
 
   return (
@@ -68,7 +42,8 @@ function SesionesFotoIdentificacion() {
               <li><Link to="/sesiones/cuadrosybasesescolares">Cuadros y Bases Escolares</Link></li>
               <li><Link to="/sesiones/impresioncredencialpvc">Impresión de Credencial PVC</Link></li>
               <li><Link to="/sesiones/caritabebe">Caritas de bebé</Link></li>
-              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoestudio" onClick={() => setMenuAbierto(false)}>Fotos de Estudio</Link></li>
+              <li><Link to="/sesiones/fotoidentificacion" onClick={() => setMenuAbierto(false)}>Fotos de Identificación</Link></li>
             </ul>
           </li>
 
@@ -90,59 +65,51 @@ function SesionesFotoIdentificacion() {
       </nav>
 
       {/* HERO */}
-      <section id="inicio" className="hero-identificacion">
+      <section id="inicio" className="hero-credencial">
         <div 
-          className="hero-slide-identificacion" 
+          className="hero-slide-credencial" 
           style={{ backgroundImage: `url(${slides[slideIndex].url})` }}
         >
-          <div className="hero-overlay-identificacion">
+          <div className="hero-overlay-credencial">
             <h2>{slides[slideIndex].titulo}</h2>
           </div>
         </div>
       </section>
 
-      {/* SERVICIOS */}
-      <section className="servicios-identificacion">
-        <p className='slogan-tabs'>Capturamos tus mejores momentos con calidad, estilo y emoción, haciendo sesiones profesionales de fotografía para que cada imagen cuente tu historia, escogiendo algún servicio de su agrado</p>
-        <div className="servicio-card">
-          <img src="/imagenes/sesionfoto.jpg" alt="Sesión en estudio" className="servicio-img"/>
-          <div className="servicio-info">
-            <h3>📸 Sesión de fotos de estudio</h3>
-            <p className="precio">$1,000</p>
-            <ul>
-              <li>✨ Incluye aproximadamente 45 min hasta 2 horas de sesión.</li>
-              <li>✨ Hasta 3 cambios de vestuario.</li>
-              <li>✨ Entrega de todos los archivos originales de la sesión.</li>
-              <li>✨ 5 fotos digitales retocadas en alta calidad.</li>
-            </ul>
-            <button 
-              className="btn-contratar" 
-              onClick={() => enviarWhatsApp("estudio")}
-            >
-              💬 Contratar servicio
-            </button>
-          </div>
-        </div>
-
-        <div className="servicio-card">
-          <img src="/imagenes/Sesión fotográfica a locación.jpg" alt="Sesión en locación" className="servicio-img"/>
-          <div className="servicio-info">
-            <h3>🏞️ Sesión de fotos a locación</h3>
-            <p className="precio">$1,500</p>
-            <p className="nota">(Depende del lugar por distancia, puede subir el precio por viáticos)</p>
-            <ul>
-              <li>✨ Incluye aproximadamente 45 min hasta 2 horas de sesión.</li>
-              <li>✨ Hasta 3 cambios de vestuario.</li>
-              <li>✨ Entrega de todos los archivos originales de la sesión.</li>
-              <li>✨ 5 fotos digitales retocadas en alta calidad.</li>
-            </ul>
-            <button 
-              className="btn-contratar" 
-              onClick={() => enviarWhatsApp("locacion")}
-            >
-              💬 Contratar servicio
-            </button>
-          </div>
+      {/* SECCIÓN FOTOS DE IDENTIFICACIÓN */}
+      <section className="servicios-credencial">
+        <h2 className="titulo-seccion">📸 Fotos de Identificación</h2>
+        <div className="grid-servicios">
+          {[
+            { nombre: "Título", precio: "2x$120", img: "/imagenes/titulo.jpg" },
+            { nombre: "Diploma", precio: "2x$90", img: "/imagenes/diploma.png" },
+            { nombre: "Filiación", precio: "4x$80", img: "/imagenes/filiacion.png" },
+            { nombre: "Pasaporte", precio: "4x$80", img: "/imagenes/pasaporte.png" },
+            { nombre: "Cartilla", precio: "4x$70", img: "/imagenes/cartilla.jpg" },
+            { nombre: "Óvalo Miñón", precio: "4x$80", img: "/imagenes/ovalo.png" },
+            { nombre: "Credencial", precio: "4x$80", img: "/imagenes/credencial.jpg" },
+            { nombre: "Tamaño Visa", precio: "4x$80", img: "/imagenes/visa.png" },
+            { nombre: "Infantil", precio: "7x$40 o $60", img: "/imagenes/infantil.png" },
+          ].map((s, i) => (
+            <div key={i} className="servicio-card">
+              <img src={s.img} alt={s.nombre} className="servicio-img" />
+              <div className="servicio-info">
+                <h3>{s.nombre}</h3>
+                <p className="precio">{s.precio}</p>
+                <p>Papel fotográfico mate, a color o blanco y negro, con o sin retoque. <br />✨ Entrega en 1 hora.</p>
+                <button 
+                  className="btn-contratar" 
+                  onClick={() => enviarMensaje(
+                    `Fotos para ${s.nombre}`,
+                    s.precio,
+                    "Papel fotográfico mate, a color o blanco y negro, con o sin retoque. Entrega en 1 hora."
+                  )}
+                >
+                  💬 Contratar servicio
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -160,7 +127,7 @@ function SesionesFotoIdentificacion() {
       </a>
 
       {/* FOOTER */}
-      <footer className="footer-identificacion">
+      <footer className="footer-credencial">
         <p>© {new Date().getFullYear()} Mundo Digital - Todos los derechos reservados.</p>
       </footer>
     </div>
